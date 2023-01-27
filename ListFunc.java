@@ -22,8 +22,6 @@ public class ListFunc {
         System.out.print("How many employees will be registered? ");
         n = ler.nextInt();
         
-        
-    
         for(i=0; i<n; i++){
             System.out.printf("\nEmployee #%d:\n", i+1 );
             System.out.print("Id: ");
@@ -33,7 +31,6 @@ public class ListFunc {
                 System.out.println("Id already taken! Try again: ");
 		id = ler.nextInt();
             }
-            
             
             System.out.print("Name: ");
             ler.nextLine();
