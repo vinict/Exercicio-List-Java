@@ -25,7 +25,7 @@ public class ListFunc {
         
     
         for(i=0; i<n; i++){
-            System.out.printf("Employee #%d:\n", i+1 );
+            System.out.printf("\nEmployee #%d:\n", i+1 );
             System.out.print("Id: ");
             id = ler.nextInt();
             
@@ -47,10 +47,10 @@ public class ListFunc {
             list.add(i, employee);
         }    
         
-        System.out.print("Enter the employee id that will have salary increase: ");
+        System.out.print("\nEnter the employee id that will have salary increase: ");
         newId = ler.nextInt();
         
-       employee = list.stream().filter(x -> x.getId() == newId).findFirst().orElse(null);
+        employee = list.stream().filter(x -> x.getId() == newId).findFirst().orElse(null);
          
         if(employee == null){
             System.out.println("This id does not exist!");
@@ -60,7 +60,7 @@ public class ListFunc {
             employee.increaseSalary(percentage);
         } 
  
-        System.out.println("List of employees: ");
+        System.out.println("\nList of employees: ");
         for(Employee x: list){
             System.out.println(x);
         }
@@ -78,7 +78,7 @@ public class ListFunc {
 	}
 	
 	public static boolean hasId(List<Employee> list, int id) {
-		Employee emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
-		return emp != null;
+		Employee employee = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+		return employee != null;
 	}
 }
